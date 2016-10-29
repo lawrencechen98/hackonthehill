@@ -1,7 +1,7 @@
 var main = function() {
   $('.btn').click(function() {
     $.ajax({
-    	'url': '/sendtweet',
+    	'url': '/sendClintonTweet',
     	'type': 'POST',
     	'success': function(data) {
     		if (data=="success") {

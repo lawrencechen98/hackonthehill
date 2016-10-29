@@ -8,8 +8,8 @@ var client = new Twitter({
   access_token_secret: 'Zs8gqf6rW341i58Y5fD8gRbzFFGvGR71KkOx1sXW0hFxE'
 });
 
-var hillaryHandle = "@HillaryClinton";
-var donaldHandle = "@realDonaldTrump";
+var hillaryHandle = "@HillaryClinton ";
+var donaldHandle = "@realDonaldTrump ";
 
 var hillaryTweets = [
 	"manage your emails!", 
@@ -22,7 +22,6 @@ var donaldTweets = [
 	"Build a wall my ass",
 	"Tu eres un bad hombre",
 	"Nice hands buddy... :)"
-
 ]
 
 
@@ -31,11 +30,26 @@ let app = express();
 
 app.use(express.static("public"));
 
+app.post('/sendClintonTweet', function(req, res) {
+	res.send("success");
+	console.log("got it!");
+	client.post('statuses/update', 
+				{status: hillaryHandle + hillaryTweets[Math.floor(Math.random() * (hillaryTweets.length))]}, 
+				function(error, tweet, res) {
+		
+		if (error){
+			console.log(error);
+		}
+		console.log("tweet: ", tweet);
+		console.log(res);
+	})
+})
+
 app.post('/sendTrumpTweet', function(req, res) {
 	res.send("success");
 	console.log("got it!");
 	client.post('statuses/update', 
-				{status: donaldHandle+donaldTweets[Math.floor(Math.random() * (donaldTweets.length)]}, 
+				{status: donaldHandle + donaldTweets[Math.floor(Math.random() * (donaldTweets.length))]}, 
 				function(error, tweet, res) {
 		
 		if (error){
