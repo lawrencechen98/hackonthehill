@@ -16,13 +16,13 @@ var main = function() {
     		type: 'POST',
     		data: tweet,
     		success: function(data) {
-    			if (data=="success") {
+    			if (data==="success") {
     				alert("request sent");
     			}
     		}
     	});
   	});
- 	$('#TrumpnBtn').click(function() {
+ 	$('#TrumpBtn').click(function() {
 
   		var tweet = getTweet('#tweetform');
   		console.log(tweet);
@@ -32,7 +32,7 @@ var main = function() {
     		type: 'POST',
     		data: tweet,
     		success: function(data) {
-    			if (data=="success") {
+    			if (data==="success") {
     				alert("request sent");
     			}
     		}
