@@ -1,5 +1,5 @@
 const express = require('express');
-const twitter = require('twitter');
+const Twitter = require('twitter');
 
 var client = new Twitter({
   consumer_key: 'jiIijCxDbOnaehbs7b7tqJPyX',
@@ -11,6 +11,11 @@ var client = new Twitter({
 let app = express();
 
 app.use(express.static("public"));
+
+app.post('/sendtweet', function(req, res) {
+	res.send("success");
+	console.log("got it!");
+})
 
 app.listen(3000, function() {
 	console.log("listening on port 3000...")
