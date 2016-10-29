@@ -1,19 +1,21 @@
 var main = function() {
 
-	getTweet: function() {
-		var tweetData = $('.tweet').serializeArray()[0];
-		var tweetText = tweetData[tweet];
-		return tweetText;
+	function getTweet(dom_query) {
+		var tweetData = $(dom_query).serializeArray()[0];
+		//var tweetText = tweetData["value"];
+		return tweetData;
 	}
 
   	$('#ClintonBtn').click(function() {
 
-  		console.log(getTweet());
+  		var tweet = getTweet('#tweetform');
+  		console.log(tweet);
   		
     	$.ajax({
-    		'url': '/sendClintonTweet',
-    		'type': 'POST',
-    		'success': function(data) {
+    		url: '/sendClintonTweet',
+    		type: 'POST',
+    		data: tweet,
+    		success: function(data) {
     			if (data=="success") {
     				alert("request sent");
     			}

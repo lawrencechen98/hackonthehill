@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/lawrencechen98/hackonthehill#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "twitter": "^1.4.0"
   }

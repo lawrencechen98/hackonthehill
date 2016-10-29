@@ -1,5 +1,6 @@
 const express = require('express');
 const Twitter = require('twitter');
+const BP = require('body-parser');
 
 var client = new Twitter({
   consumer_key: 'jiIijCxDbOnaehbs7b7tqJPyX',
@@ -29,35 +30,52 @@ var donaldTweets = [
 let app = express();
 
 app.use(express.static("public"));
+app.use(BP.urlencoded({extended: false}));
 
 app.post('/sendClintonTweet', function(req, res) {
 	res.send("success");
 	console.log("got it!");
-	client.post('statuses/update', 
+	console.log(req.body.value);
+	var tweet = req.body.value;
+	/*
+		client.post('statuses/update', 
 				{status: hillaryHandle + hillaryTweets[Math.floor(Math.random() * (hillaryTweets.length))]}, 
 				function(error, tweet, res) {
 		
-		if (error){
-			console.log(error);
-		}
+					if (error){
+						console.log(error);
+					}
+					console.log("tweet: ", tweet);
+					console.log(res);
+
+		})
+	*/
+
+	client.post('statuses/update', 
+				{status: hillaryHandle + tweet}, 
+				function(error, tweet, res) {
+		
+		if (error) throw error;
 		console.log("tweet: ", tweet);
 		console.log(res);
 	})
 })
 
+
 app.post('/sendTrumpTweet', function(req, res) {
 	res.send("success");
 	console.log("got it!");
+	console.log(req.query.data);
+	
 	client.post('statuses/update', 
 				{status: donaldHandle + donaldTweets[Math.floor(Math.random() * (donaldTweets.length))]}, 
 				function(error, tweet, res) {
 		
-		if (error){
-			console.log(error);
-		}
+		if (error) throw error;
 		console.log("tweet: ", tweet);
 		console.log(res);
 	})
+	
 })
 
 app.listen(3000, function() {
