@@ -1,14 +1,16 @@
 .banner{
 	background-color: lightblue;
+	padding: 30px;
 }
 
-.title{
-	margin: 0;
-	text-align: center;
-}
+
 
 body{
-	background: red;
+	background: lightgrey;
+}
+
+.candidates{
+	text-align: center;
 }
 
 .btn:focus, .btn:active {
