@@ -1,34 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>TrumpTweet</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<!-- JQuery CDN -->
-    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-	
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
- 
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tweet Bot</title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="animate.css" />
+<link rel="stylesheet" href="set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <div class="banner">
+<div class="topbar animated fadeInLeftBig"></div>
+
+<!-- Header Starts -->
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
+          <div class="container">
+            <div class="navbar-header">
+              <!-- Logo Starts -->
+              <a class="navbar-brand" href="#home"><img src="images/logo.png" alt="logo"></a>
+              <!-- #Logo Ends -->
 
 
-    <div class="row">
-      <div class = "col-md-1">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+
+
+            <!-- Nav Starts -->
+            <div class="navbar-collapse  collapse">
+              <ul class="nav navbar-nav navbar-right scroll">
+                 <li class="active"><a href="#home">Home</a></li>           
+              </ul>
+            </div>
+            <!-- #Nav Ends -->
+
+          </div>
+        </div>
+
       </div>
-      <div class = "title col-xs-12 col-md-10">
-      <h1>Tweet Bot</h1>
-      <h3>@ Me Bro...</h3>
+    </div>
+<!-- #Header Starts -->
+
+
+
+
+<div id="home">
+<!-- Slider Starts -->
+<div id="myCarousel" class="carousel slide banner-slider animated flipInX" data-ride="carousel">     
+      <div class="carousel-inner">
+        <!-- Item 1 -->
+        <div class="item active">
+          <img src="images/back1.jpg" alt="banner">          
+            <div class="carousel-caption">
+              <div class="caption-wrapper">
+                <div class="caption-info">
+                <img src="images/logobig.png" class="animated bounceInUp" alt="logo">
+                  <h1 class="animated bounceInLeft">Trump vs Hilary</h1>
+                  <p class="animated bounceInRight">Send a random anonymous tweet to Trump or Hilary, or type your own!</p>
+                  <div class="scroll animated fadeInUp"><a href="#works" class="btn btn-default"><i class="fa fa-flask"></i>  @realDonaldTrump</a> <a href="#contact" class="btn btn-default"><i class="fa fa-paper-plane-o"></i> @HillaryClinton</a></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- #Item 1 -->
+
+        <!-- Item 1 -->
+        <div class="item">
+          <img src="images/back2.jpg" alt="banner">          
+             <div class="carousel-caption">
+              <div class="caption-wrapper">
+                <div class="caption-info">
+                <img src="images/logobig.png" class="animated bounceInUp" alt="logo">
+                  <h1 class="animated bounceInLeft">Creative digital agency</h1>
+                  <p class="animated bounceInRight">Lead by passionate and uber progressive team that lives and breathes design.</p>
+                  <div class="scroll animated fadeInUp"><a href="#works" class="btn btn-default"><i class="fa fa-flask"></i>  View Project</a> <a href="#contact" class="btn btn-default"><i class="fa fa-paper-plane-o"></i> Start Your Project</a></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- #Item 1 -->
+
+        <!-- Item 1 -->
+        <div class="item">
+          <img src="images/back3.jpg" alt="banner">          
+             <div class="carousel-caption">
+              <div class="caption-wrapper">
+                <div class="caption-info">
+                <img src="images/logobig.png" class="animated bounceInUp" alt="logo">
+                  <h1 class="animated bounceInLeft">Creative digital agency</h1>
+                  <p class="animated bounceInRight">Lead by passionate and uber progressive team that lives and breathes design.</p>
+                  <div class="scroll animated fadeInUp"><a href="#works" class="btn btn-default"><i class="fa fa-flask"></i>  View Project</a> <a href="#contact" class="btn btn-default"><i class="fa fa-paper-plane-o"></i> Start Your Project</a></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- #Item 1 -->
+
+        <!-- Item 1 -->
+        <div class="item">
+          <img src="images/back4.jpg" alt="banner">          
+             <div class="carousel-caption">
+              <div class="caption-wrapper">
+                <div class="caption-info">
+                <img src="images/logobig.png" class="animated bounceInUp" alt="logo">
+                  <h1 class="animated bounceInLeft">Creative digital agency</h1>
+                  <p class="animated bounceInRight">Lead by passionate and uber progressive team that lives and breathes design.</p>
+                  <div class="scroll animated fadeInUp"><a href="#works" class="btn btn-default"><i class="fa fa-flask"></i>  View Project</a> <a href="#contact" class="btn btn-default"><i class="fa fa-paper-plane-o"></i> Start Your Project</a></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!-- #Item 1 -->
       </div>
-      <div class = "col-md-1">
-      </div>
-      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon-chevron-left"><i class="fa fa-angle-left"></i></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon-chevron-right"><i class="fa fa-angle-right"></i></span></a>
+    </div>
+<!-- #Slider Ends -->
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Cirlce Starts -->
+<div id="about"  class="container spacer about">
+<h2 class="text-center wowload fadeInUp">Creative digital agency based on London</h2>  
+  <div class="row">
+  <div class="col-sm-6 wowload fadeInLeft">
+    <h4><i class="fa fa-paint-brush"></i> Design</h4>
+    <p>Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs, lead by passionate and uber progressive team that lives and breathes design. Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs.</p>
+    
 
   </div>
-  <div class = "container">
-  <button type="button" class="btn btn-primary" action="POST">Tweet</button>
+  <div class="col-sm-6 wowload fadeInRight">
+  <h4><i class="fa fa-code"></i> Frontend & Backend Development</h4>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>    
   </div>
-  <script type='text/javascript' src='/scripts/script.js'></script>
+  </div>
+
+  <div class="process">
+  <h3 class="text-center wowload fadeInUp">Process</h3>
+  <ul class="row text-center list-inline  wowload bounceInUp">
+      <li>
+            <span><i class="fa fa-history"></i><b>Research</b></span>
+        </li>
+        <li>
+            <span><i class="fa fa-puzzle-piece"></i><b>Plan</b></span>
+        </li>
+        <li>
+            <span><i class="fa fa-database"></i><b>Develop</b></span>
+        </li>
+        <li>
+            <span><i class="fa fa-magic"></i><b>Integration</b></span>
+        </li>        
+        <li>
+            <span><i class="fa fa-cloud-upload"></i><b>Deliver</b></span>
+        </li>
+    </ul>
+  </div>
+</div>
+<!-- #Cirlce Ends -->
 </body>
 </html>
