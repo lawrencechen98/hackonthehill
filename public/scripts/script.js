@@ -22,11 +22,16 @@ var main = function() {
     		}
     	});
   	});
- 	$('#TrumpBtn').click(function() {
+ 	$('#TrumpnBtn').click(function() {
+
+  		var tweet = getTweet('#tweetform');
+  		console.log(tweet);
+  		
     	$.ajax({
-    		'url': '/sendTrumpTweet',
-    		'type': 'POST',
-    		'success': function(data) {
+    		url: '/sendTrumpTweet',
+    		type: 'POST',
+    		data: tweet,
+    		success: function(data) {
     			if (data=="success") {
     				alert("request sent");
     			}

@@ -13,9 +13,9 @@ var hillaryHandle = "@HillaryClinton ";
 var donaldHandle = "@realDonaldTrump ";
 
 var hillaryTweets = [
-	"manage your emails!", 
-	"Hillary for Prison!",
-	"Such a nasty woman"
+	"manage your emails", 
+	"Hillary for Prison",
+	"Such a nasty woman!"
 ];
 
 var donaldTweets = [
@@ -32,50 +32,70 @@ let app = express();
 app.use(express.static("public"));
 app.use(BP.urlencoded({extended: false}));
 
+
 app.post('/sendClintonTweet', function(req, res) {
 	res.send("success");
 	console.log("got it!");
 	console.log(req.body.value);
 	var tweet = req.body.value;
-	/*
-		client.post('statuses/update', 
+
+	if(tweet === ""){client.post('statuses/update', 
 				{status: hillaryHandle + hillaryTweets[Math.floor(Math.random() * (hillaryTweets.length))]}, 
 				function(error, tweet, res) {
 		
-					if (error){
-						console.log(error);
-					}
-					console.log("tweet: ", tweet);
-					console.log(res);
+		if (error){
+			console.log(error);
+		} 
+		console.log("tweet: ", tweet);
+		console.log(res);
 
-		})
-	*/
+	})
+	}
 
-	client.post('statuses/update', 
+	else{client.post('statuses/update', 
 				{status: hillaryHandle + tweet}, 
 				function(error, tweet, res) {
 		
-		if (error) throw error;
+		if (error){
+			console.log(error);
+		}
 		console.log("tweet: ", tweet);
 		console.log(res);
 	})
+	}
 })
 
 
 app.post('/sendTrumpTweet', function(req, res) {
 	res.send("success");
 	console.log("got it!");
-	console.log(req.query.data);
-	
-	client.post('statuses/update', 
+	console.log(req.body.value);
+	var tweet = req.body.value;
+
+	if(tweet === ""){client.post('statuses/update', 
 				{status: donaldHandle + donaldTweets[Math.floor(Math.random() * (donaldTweets.length))]}, 
 				function(error, tweet, res) {
 		
-		if (error) throw error;
+		if (error){
+			console.log(error);
+		} 
+		console.log("tweet: ", tweet);
+		console.log(res);
+
+	})
+	}
+
+	else{client.post('statuses/update', 
+				{status: donaldHandle + tweet}, 
+				function(error, tweet, res) {
+		
+		if (error){
+			console.log(error);
+		}
 		console.log("tweet: ", tweet);
 		console.log(res);
 	})
-	
+	}
 })
 
 app.listen(3000, function() {
