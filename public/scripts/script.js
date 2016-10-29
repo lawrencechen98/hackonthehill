@@ -3,13 +3,12 @@ var main = function() {
     $.ajax({
     	'url': '/sendtweet',
     	'type': 'POST',
-    },
-    'success': function(data) {
-    	if (data=="success") {
-    		alert("request sent");
+    	'success': function(data) {
+    		if (data=="success") {
+    			alert("request sent");
+    		}
     	}
-    }
-    );
+    });
   });
 }
 
