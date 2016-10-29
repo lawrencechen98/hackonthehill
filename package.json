@@ -1,0 +1,25 @@
+{
+  "name": "hackonthehill",
+  "version": "1.0.0",
+  "description": "Tweetbot Project at Hack On The Hill 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawrencechen98/hackonthehill.git"
+  },
+  "keywords": [
+    "Tweet"
+  ],
+  "author": "Lawrence Chen, Ram Goli, Nityan Bhorde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lawrencechen98/hackonthehill/issues"
+  },
+  "homepage": "https://github.com/lawrencechen98/hackonthehill#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
