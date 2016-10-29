@@ -29,8 +29,14 @@ var donaldTweets = [
 
 let app = express();
 
+
 app.use(express.static("public"));
 app.use(BP.urlencoded({extended: false}));
+
+app.get('/', (req,res) => {
+	console.log("hello");
+	res.redirect('/main.html');
+});
 
 
 app.post('/sendClintonTweet', function(req, res) {
