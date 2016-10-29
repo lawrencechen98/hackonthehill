@@ -15,8 +15,10 @@ app.use(express.static("public"));
 app.post('/sendtweet', function(req, res) {
 	res.send("success");
 	console.log("got it!");
-	client.post('status/update', {status: "Lo and behold: Our first tweet"}, function(error, tweet, res) {
-		if (error) throw error;
+	client.post('statuses/update', {status: "Lo and behold: Our first tweet"}, function(error, tweet, res) {
+		if (error){
+			console.log(error);
+		}
 		console.log("tweet: ", tweet);
 		console.log(res);
 	})
