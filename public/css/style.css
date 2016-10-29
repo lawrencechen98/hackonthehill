@@ -1,13 +1,16 @@
-.header{
+.banner{
 	background-color: lightblue;
+}
+
+.title{
+	margin: 0;
 	text-align: center;
 }
 
-.header h1{
-	margin: 0;
+body{
+	background: red;
 }
 
-body{
-	margin:0;
-	background-color: lightgray;
+.btn:focus, .btn:active {
+  outline: none;
 }
