@@ -3,10 +3,10 @@ const Twitter = require('twitter');
 const BP = require('body-parser');
 
 var client = new Twitter({
-  consumer_key: 'jiIijCxDbOnaehbs7b7tqJPyX',
-  consumer_secret: 'DwE2m28SgJgS7lzvY10lKTe35n788d1gJSzx5GoTffgUJ2Bbjl',
-  access_token_key: '792408044491583488-6vQl7QBWCkQoq6gvq0PuKgNQqdoUueb',
-  access_token_secret: 'Zs8gqf6rW341i58Y5fD8gRbzFFGvGR71KkOx1sXW0hFxE'
+  consumer_key: 'mBrEVtVf6WOeO4TDWvdVFywDJ',
+  consumer_secret: 'cOSnmjUduOJfjQinWmX02lsj2dTUYBjwVsoWCVFT9rgvKpIUlc',
+  access_token_key: '792577653970612224-yNJPAa4TXMkw4o0UZirKzQKpOlAheuS',
+  access_token_secret: 'v65qO6EAo5toYpaoOcAj4X87sHy6scQlDd06LxZvprD1y'
 });
 
 var hillaryHandle = "@HillaryClinton ";
