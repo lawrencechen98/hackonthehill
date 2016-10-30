@@ -34,8 +34,25 @@ app.use(express.static("public"));
 app.use(BP.urlencoded({extended: false}));
 
 app.get('/', (req,res) => {
-	console.log("hello");
+
 	res.redirect('/main.html');
+});
+
+app.get('/searchtweets', (req,res) => {
+	
+	client.get('search/tweets', {q: 'Clinton', count: 50}, function(error, tweets, response) {
+   		var statuses = tweets['statuses'];
+   		res.json(statuses);
+	});
+});
+
+app.get('/searchtweets2', (req,res) => {
+	
+	client.get('search/tweets', {q: 'Trump', count: 50}, function(error, tweets, response) {
+   		var statuses = tweets['statuses'];
+   		console.log(statuses);
+   		res.json(statuses);
+	});
 });
 
 
@@ -45,6 +62,7 @@ app.post('/sendClintonTweet', function(req, res) {
 	console.log(req.body.value);
 	var tweet = req.body.value;
 
+
 	if(tweet === ""){client.post('statuses/update', 
 				{status: hillaryHandle + hillaryTweets[Math.floor(Math.random() * (hillaryTweets.length))]}, 
 				function(error, tweet, res) {
@@ -52,8 +70,6 @@ app.post('/sendClintonTweet', function(req, res) {
 		if (error){
 			console.log(error);
 		} 
-		console.log("tweet: ", tweet);
-		console.log(res);
 
 	})
 	}
@@ -65,8 +81,6 @@ app.post('/sendClintonTweet', function(req, res) {
 		if (error){
 			console.log(error);
 		}
-		console.log("tweet: ", tweet);
-		console.log(res);
 	})
 	}
 })
@@ -85,8 +99,6 @@ app.post('/sendTrumpTweet', function(req, res) {
 		if (error){
 			console.log(error);
 		} 
-		console.log("tweet: ", tweet);
-		console.log(res);
 
 	})
 	}
@@ -98,8 +110,7 @@ app.post('/sendTrumpTweet', function(req, res) {
 		if (error){
 			console.log(error);
 		}
-		console.log("tweet: ", tweet);
-		console.log(res);
+
 	})
 	}
 })

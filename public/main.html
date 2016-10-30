@@ -33,15 +33,63 @@
 
 
 <div class = "row candidates">
-  <button type="button" id= "ClintonBtn" class="btn btn-info btn-lg">Tweet @ Clinton</button>
+  <button type="button" id= "ClintonBtn" class="btn btn-info">Tweet @ Clinton</button>
 
 
-  <button type="button" id = "TrumpBtn" class="btn btn-danger btn-lg">Tweet @ Trump</button>
+  <button type="button" id = "TrumpBtn" class="btn btn-danger">Tweet @ Trump</button>
 </div>
 
 
+<div class="container">
+      <div class="row">
+         
+      
+        <div class= "col-xs-6">
+
+        <table class="table">
+          
+          <tbody id="tweet-table" >
 
 
-<script src="/scripts/script.js"></script>
+          </tbody>
+        </table>
+        </div>
+        <div class= "col-xs-6">
+
+        <table class="table">
+          
+          <tbody id="tweet2-table" >
+
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+    <script id="tweet-template" type="text/x-handlebars-template">
+      <tr class="tweet-table-row {{properties.alert}} ">
+        <td>
+          {{user.name}}
+        </td>
+        <td>
+          {{text}}
+        </td>
+      </tr>
+    </script>
+
+
+    <script id="tweet2-template" type="text/x-handlebars-template">
+      <tr class="tweet2-table-row {{properties.alert}} ">
+        <td>
+          {{user.name}}
+        </td>
+        <td>
+          {{text}}
+        </td>
+      </tr>
+    </script>
+    <!-- handlebars script -->
+    <script src="/scripts/handlebars-v4.0.5.js"></script>
+
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
