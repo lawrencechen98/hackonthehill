@@ -42,15 +42,15 @@ var main = function() {
 
   		var tweet = getTweet('#tweetform');
   		console.log(tweet);
+
+  		$('.status-box').val('');
   		
     	$.ajax({
     		url: '/sendClintonTweet',
     		type: 'POST',
     		data: tweet,
     		success: function(data) {
-    			if (data==="success") {
-    				alert("request sent");
-    			}
+    			
     		}
     	});
   	});
@@ -58,15 +58,15 @@ var main = function() {
 
   		var tweet = getTweet('#tweetform');
   		console.log(tweet);
+
+  		$('.status-box').val('');
   		
     	$.ajax({
     		url: '/sendTrumpTweet',
     		type: 'POST',
     		data: tweet,
     		success: function(data) {
-    			if (data==="success") {
-    				alert("request sent");
-    			}
+    			
     		}
     	});
   	});
