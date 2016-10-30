@@ -17,12 +17,12 @@
 </head>
 <body>
 
-<div class="banner">
-  <div class = "row">
+
+  <div class = "row banner">
     <h1>Tweet on the Hill</h1>
     <h3>Want to tweet your thoughts about the election ANONYMOUSLY? @ them here!</h3>
   </div>
-</div>
+
 
   <div class="form-group">
     <form id= "tweetform">
@@ -32,7 +32,7 @@
   </div>
 
 
-<div class = "row candidates">
+<div class = "row button">
   <button type="button" id= "ClintonBtn" class="btn btn-info">Tweet @ Clinton</button>
 
 
@@ -40,11 +40,12 @@
 </div>
 
 
-<div class="container">
+
       <div class="row">
          
       
         <div class= "col-xs-6">
+        <h5>See what people are saying about Clinton:</h5>
 
         <table class="table">
           
@@ -55,7 +56,7 @@
         </table>
         </div>
         <div class= "col-xs-6">
-
+        <h5>See what people are saying about Trump:</h5>
         <table class="table">
           
           <tbody id="tweet2-table" >
@@ -63,7 +64,7 @@
           </tbody>
         </table>
         </div>
-      </div>
+
 
     <script id="tweet-template" type="text/x-handlebars-template">
       <tr class="tweet-table-row {{properties.alert}} ">
